@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+html {
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+:root {
+	--main-color: rgb(123, 189, 255);
+	--main-color-light: rgb(233, 245, 255);
+	--color: white;
+	--color-second: #303030;
+}
+
+body {
+	background-color: var(--main-color);
+	color: var(--color);
+}
+
+header {
+	height: auto;
+	color: var(--color);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: -10px;
+}
+
+.main-title {
+	text-align: center;
+	padding: 35px;
+}
+
+.logo img {
+	width: 30px;
+}
+
+.container {
+	height: auto;
+}
+
+.card {
+	height: auto;
+	width: 145px;
+	border-radius: 20px;
+	background-color: var(--color);
+	color: var(--color-second);
+	padding: 15px;
+	cursor: pointer;
+	border: 4px solid var(--main-color-light);
+}
+
+.card:hover {
+	transform: scale(1.015);
+	border: 4px solid #3768a4;
+	transition: .3s;
+}
+
+.profile svg {
+	width: 55px;
+	height: 55px;
+}
+
+.title-room a {
+	text-decoration: none;
+	color: var(--color-second);
+	text-align: center;
+}
+
+.card p {
+	font-size: 9px;
+	font-weight: 500;
+	color: grey;
+}
+
+.container {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: repeat(2, 1fr);
+	margin: 20px auto;
+	justify-items: center;
+	width: 90%;
+}
+
+main {
+	display: flex;
+	width: 90%;
+	margin: auto;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: -7px;
+}
+
+.sub-title {
+	font-size: 18px;
+	padding: 0 0 20px 0;
+	font-weight: 500;
+}
+
+.bengkel img {
+	width: 150px;
+	margin: 0px 20px;
+}
+
+.about {
+	font-size: 11px;
+	width: 90%;
+	margin: auto;
+	background-color: var(--color);
+	height: auto;
+	border-radius: 100px;
+	padding: 5px;
+	padding-left: 15px;
+}
+
+.about a {
+	text-decoration: none;
+	color: grey;
+	font-weight: 500;
+}
+
+.foot {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: auto;
+	font-size: 12px;
+	font-weight: 500;
+	color: var(--color);
+	align-items: center;
+	padding: 15px 10%;
+}
+
+.foot span a {
+	text-decoration: none;
+	color: var(--color);
+	cursor: pointer;
+}
+
+.logout a {
+	text-decoration: none;
+	color: var(--color);
+	font-size: 14px;
+	font-weight: 600;
+	padding: 5px 7px;
+	border-radius: 2px;
+	border: 1px solid var(--color);
+	cursor: pointer;
+}
+
+.awan img {
+	width: 60px;
+	position: absolute;
+	top: 95px;
+	animation-name: awanimasi;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes awanimasi {
+	0% {
+		right: 30px;
+	}
+
+	50% {
+		right: 80px;
+	}
+
+	100% {
+		right: 30px;
+	}
+}
+
+.awans img {
+	width: 40px;
+	position: absolute;
+	top: 77px;
+	animation-name: awansimasi;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes awansimasi {
+	0% {
+		right: 150px;
+	}
+
+	50% {
+		right: 100px;
+	}
+
+	100% {
+		right: 150px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+  	grid-template-columns: auto auto auto auto;
+  }
+}

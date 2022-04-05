@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+:root {
+	--main-color: rgb(123, 189, 255);
+	--main-color-light: rgb(233, 245, 255);
+	--color: white;
+	--color-second: #303030;
+}
+
+body {
+	background-color: var(--main-color);
+}
+
+.inputan label {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	color: var(--color);
+	margin: 15px 0 2px 15px;
+}
+
+.form-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding: 30px;
+	width: 300px;
+	height: 350px;
+	border-radius: 15px;
+	margin: auto;
+	background-color: var(--main-color);
+}
+
+.login-title {
+	color: var(--color);
+	text-align: center;
+	margin-bottom: 23px;
+	padding-bottom: 13px;
+	border-bottom: solid 2px var(--color);
+	width: 60%;
+	margin: auto auto 35px auto;
+	font-size: 21px;
+}
+
+.inputan input {
+	width: 100%;
+	outline: none;
+	border: none;
+	border-radius: 100px;
+	padding: 8px 15px;
+	font-size: 12px;
+}
+
+.inputan input:focus {
+	outline: none;
+}
+
+.btn {
+	margin: 35px auto;
+	text-align: center;
+}
+
+button {
+	font-size: 16px;
+	padding: 10px 30px;
+	font-weight: 500;
+	color: var(--main-color);
+	background-color: var(--color);
+	border: none;
+	border-radius: 100px;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	margin-top: 5px;
+	z-index: 3;
+	width: 10%;
+	height: 192px;
+	animation-name: rotata;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+
+}
+
+.logo .circle svg {
+	width: 52px;
+	position: absolute;
+	top: 70px;
+	margin-left: -26px;
+	z-index: 1;
+}
+
+.logo .up svg{
+	width: 25px;
+	position: absolute;
+	top: 55px;
+	z-index: 2;
+	margin-left: -13px;
+	animation-name: updown;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.logo .bottom svg{
+	width: 25px;
+	position: absolute;
+	top: 100px;
+	z-index: 2;
+	margin-left: -13px;
+	animation-name: downup;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.logo .right svg{
+	width: 25px;
+	position: absolute;
+	top: 77px;
+	z-index: 2;
+	margin-left: 9px;
+	transform: rotate(90deg);
+	animation-name: leftright;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.logo .left svg{
+	width: 25px;
+	position: absolute;
+	top: 77px;
+	z-index: 2;
+	margin-left: -35px;
+	transform: rotate(90deg);
+	animation-name: rightleft;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes rotata {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes updown {
+	0% {
+		top: 55px;
+		transform: scale(1);
+	}
+
+	50% {
+		top: 35px;
+		transform: scale(.5);
+	}
+
+	100% {
+		top: 55px;
+		transform: scale(1);
+	}
+}
+
+@keyframes downup {
+	0% {
+		top: 100px;
+		transform: scale(1);
+	}
+
+	50% {
+		top: 120px;
+		transform: scale(.5);
+	}
+
+	100% {
+		top: 100px;
+		transform: scale(1);
+	}
+}
+
+@keyframes leftright {
+	0% {
+		margin-left: 9px;
+		transform: scale(1) rotate(90deg);
+	}
+
+	50% {
+		margin-left: 29px;
+		transform: scale(.5) rotate(90deg);
+	}
+
+	100% {
+		margin-left: 9px;
+		transform: scale(1) rotate(90deg);
+	}
+}
+
+@keyframes rightleft {
+	0% {
+		margin-left: -35px;
+		transform: scale(1) rotate(90deg);
+	}
+
+	50% {
+		margin-left: -55px;
+		transform: scale(.5) rotate(90deg);
+	}
+
+	100% {
+		margin-left: -35px;
+		transform: scale(1) rotate(90deg);
+	}
+}
+
+.form-wrap p {
+	color: var(--color);
+	font-size: 12px;
+	text-align: center;
+	background-color: #FF4343;
+	border-radius: 5px;
+	padding: 5px;
+	margin: auto;
+	transition: .3s;
+	animation-name: pop;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
+	font-weight: 500;
+}
+
+@keyframes pop {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.remember {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	font-size: 13px;
+	color: var(--color);
+	font-weight: 200;
+}
+
+.remember input {
+}
+
+.title-remember {
+	margin-left: 10px;
+}
